@@ -32,6 +32,11 @@ bash-terminal$ # Open your browser at:  http://localhost:4200
 ```
 
 ## OLD UI
+
+<p align="center">
+  <img width="1875" alt="Screen Shot 2020-08-13 at 00 53 59" src="https://user-images.githubusercontent.com/621906/90159828-52475d00-dd67-11ea-8543-669dd0347044.png">
+</p>
+
 ```bash
 bash-terminal$ cd hygieia 
 bash-terminal$ ./launch-old-ui.sh
