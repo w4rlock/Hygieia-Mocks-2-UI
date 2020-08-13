@@ -1,0 +1,60 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: db
+    volumes:
+      - ./db:/data/db
+    environment:
+      - MONGO_DATABASE=dashboarddb
+      - MONGO_USERNAME=dashboarduser
+      - MONGO_PASSWORD=dbpassword
+    ports:
+      - "27017:27017"
+
+
+  hygieia-api:
+    image: warlockgpl/hygieia-api:0.0.2
+    container_name: api
+    depends_on:
+      - mongodb
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./logs:/hygieia/logs
+    environment:
+      - jasypt.encryptor.password=hygieiasecret
+      - SPRING_DATA_MONGODB_HOST=mongodb
+      - SPRING_DATA_MONGODB_PORT=27017
+      - SPRING_DATA_MONGODB_DATABASE=dashboard
+      - SPRING_DATA_MONGODB_USERNAME=db
+      - SPRING_DATA_MONGODB_PASSWORD=dbpass
+    links:
+      - mongodb
+
+
+  #hygieia-ui:
+    #image: w4rlock/hygieia-ui:0.0.8
+    #container_name: ui
+    #depends_on:
+      #- hygieia-api
+    #ports:
+      #- "8088:80"
+    #environment:
+      #- API_URL=http://hygieia-api:8080
+    #links:
+      #- hygieia-api
+
+
+  #hygieia-ui-old:
+    #image: ctphpe/hygieia-ui
+    ##image: cklassen/hygieia-ui
+    #container_name: ui-old
+    #depends_on:
+      #- hygieia-api
+    #ports:
+      #- "8087:80"
+    #environment:
+      #- API_URL=http://hygieia-api:8080
+    #links:
+      #- hygieia-api
