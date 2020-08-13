@@ -47,3 +47,14 @@ sleep 10
 echo "Creating mongo user..."
 docker exec db mongo localhost/admin  --eval 'db.getSiblingDB("dashboard").createUser({user: "db", pwd: "dbpass", roles: [{role: "readWrite", db: "dashboard"}]})' > logs/mongo-script.log
 
+
+echo 'Running Add Dashboard core scripts...'
+node repos/mocks/utilities/add-dashboard.js
+echo 'Running Add Data scripts...'
+node repos/mocks/utilities/add-data.js
+echo 'Done!'
+
+echo 'Next steps:  ./launch-new-ui.sh'
+echo 'Or'
+echo 'Next steps:  ./launch-old-ui.sh"
+
