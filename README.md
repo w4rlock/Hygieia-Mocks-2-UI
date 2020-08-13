@@ -34,7 +34,7 @@ bash-terminal$ # Open your browser at:  http://localhost:4200
 ## OLD UI
 
 <p align="center">
-  <img width="1875" alt="Screen Shot 2020-08-13 at 00 53 59" src="https://user-images.githubusercontent.com/621906/90159828-52475d00-dd67-11ea-8543-669dd0347044.png">
+  <img width="1875" alt="Screen Shot 2020-08-13 at 00 53 59" src="https://user-images.githubusercontent.com/621906/90160054-a2beba80-dd67-11ea-97a6-744ce42242c9.png">
 </p>
 
 ```bash
