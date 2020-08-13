@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
-./stop.sh &> /dev/null
+if ! docker ps &> /dev/null; then
+  echo "Error: verify that docker is running"
+  echo "after that, run next command to check all is right:"
+  echo "docker run hello-world"
+  exit 1
+fi
 
+./stop.sh &> /dev/null
 mkdir logs &> /dev/null
 mkdir repos &> /dev/null
 
