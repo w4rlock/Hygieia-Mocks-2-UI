@@ -1,7 +1,7 @@
 # Hygieia-Mocks-2-UI
 
 <p align="center">
-<img width="1583" alt="Screen Shot 2020-08-13 at 13 12 14" src="https://user-images.githubusercontent.com/621906/90159359-a9006700-dd66-11ea-8c4c-60f4f7d69ded.png">
+<img width="1583" alt="Screen Shot 2020-08-13 at 13 12 14" src="https://user-images.githubusercontent.com/621906/90159730-304dda80-dd67-11ea-9f09-697e1b87a96d.png">
 </p>
 
 ## REQUIREMENTS:
