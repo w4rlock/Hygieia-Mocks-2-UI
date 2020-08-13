@@ -19,10 +19,15 @@ terminal$ ./start-infra.sh
 ## NEW UI
 ```bash
 terminal$ cd hygieia 
-terminal$ launch-new-ui.sh
+terminal$ ./launch-new-ui.sh
+terminal$ # Open your browser at:  http://localhost:4200
+
+```
 
 ## OLD UI
 ```bash
 terminal$ cd hygieia 
-terminal$ launch-old-ui.sh
+terminal$ ./launch-old-ui.sh
+terminal$ # Open your browser at:  http://localhost:3000
+
 ```
